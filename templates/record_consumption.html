@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Consumption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Record Consumption</h1>
+    <form id="consumptionForm" method="POST">
+        <label for="meter_id">Meter ID:</label>
+        <input type="number" id="meter_id" name="meter_id" required>
+        <label for="reading_date">Reading Date:</label>
+        <input type="date" id="reading_date" name="reading_date" required>
+        <label for="units_used">Units Used:</label>
+        <input type="number" id="units_used" name="units_used" step="0.01" required>
+        <button type="submit">Record Consumption</button>
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
